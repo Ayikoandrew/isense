@@ -21,6 +21,7 @@ class BuildHeader extends StatelessWidget {
                     size: 34,
                     color: Colors.white,
                   ),
+                  const SizedBox(width: 8),
                   Text(
                     'iSense',
                     style: TextStyle(color: Colors.white70, fontSize: 20),
@@ -67,9 +68,11 @@ class BuildHeader extends StatelessWidget {
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
             decoration: BoxDecoration(
-              color: Colors.white.withValues(alpha: 0.1),
+              color: const Color(0xFFFFFFFF).withValues(alpha: 0.1),
               borderRadius: BorderRadius.circular(20),
-              border: BoxBorder.all(color: Colors.white.withValues(alpha: 0.2)),
+              border: BoxBorder.all(
+                color: const Color(0xFFFFFFFF).withValues(alpha: 0.2),
+              ),
             ),
             child: Row(
               mainAxisSize: MainAxisSize.min,
