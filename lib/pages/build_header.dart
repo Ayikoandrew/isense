@@ -13,10 +13,19 @@ class BuildHeader extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Icon(
-                Icons.dashboard_customize_rounded,
-                size: 34,
-                color: Colors.white,
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Icon(
+                    Icons.dashboard_customize_rounded,
+                    size: 34,
+                    color: Colors.white,
+                  ),
+                  Text(
+                    'iSense',
+                    style: TextStyle(color: Colors.white70, fontSize: 20),
+                  ),
+                ],
               ),
               Flexible(
                 child: Wrap(
