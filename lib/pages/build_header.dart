@@ -90,7 +90,8 @@ class BuildHeader extends StatelessWidget {
           const SizedBox(height: 30),
 
           TextInfo(
-            text: 'Smart business \nmanagement, just for you.',
+            text:
+                'AI powered business intelligence \nplatform that turns any business data into actionable predictions',
             fontsize: 36,
             height: 1.2,
             color: Colors.white,
