@@ -1,0 +1,7 @@
+const Color(0xFF1e3a8a),
+const Color(0xFF3b82f6),
+const Color(0xFF0f172a),
+
+const Color(0xFF0c4a6e),
+const Color(0xFF075985),
+const Color(0xFF0a2540),
