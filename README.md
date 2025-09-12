@@ -1,16 +1,46 @@
-# dashboad
+# Dashboard
 
-A new Flutter project.
+A Flutter frontend application for productionized machine learning models.
+
+## Overview
+
+This dashboard serves as the user interface for interacting with machine learning models deployed in production. The application communicates with a backend API built in Go, which interfaces with Python-based ML models.
+
+## Architecture
+
+- **Frontend**: Flutter (this repository)
+- **Backend API**: Go
+- **ML Models**: Python
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+### Prerequisites
 
-A few resources to get you started if this is your first Flutter project:
+- Flutter SDK
+- Dart SDK
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Installation
+
+1. Clone the repository
+2. Install dependencies:
+    ```bash
+    flutter pub get
+    ```
+3. Run the application:
+    ```bash
+    flutter run
+    ```
+
+## Features
+
+- Interactive dashboard for ML model predictions
+- Real-time data visualization
+- Model performance monitoring
+- User-friendly interface for model interaction
+
+## Development
 
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
