@@ -26,32 +26,7 @@ class BuildDemoDashboard extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Logo(),
-                  Container(
-                    width: size / 2,
-                    padding: const EdgeInsets.all(10),
-                    decoration: BoxDecoration(
-                      color: const Color(0xFFFFFFFF).withValues(alpha: 0.1),
-                      borderRadius: BorderRadius.circular(16),
-                      border: Border.all(
-                        color: const Color(0xFFFFFFFF).withValues(alpha: 0.2),
-                      ),
-                    ),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        Icon(
-                          Icons.search,
-                          size: 12,
-                          color: const Color(0xFFFFFFFF).withValues(alpha: 0.1),
-                        ),
-                        const SizedBox(width: 8),
-                        Text(
-                          'Search',
-                          style: TextStyle(color: Colors.white70, fontSize: 12),
-                        ),
-                      ],
-                    ),
-                  ),
+                  DummySearch(size: size),
                   ShowStatus(),
                 ],
               ),
@@ -63,16 +38,49 @@ class BuildDemoDashboard extends StatelessWidget {
   }
 }
 
+class DummySearch extends StatelessWidget {
+  const DummySearch({super.key, required this.size});
+
+  final double size;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: size / 2,
+      padding: const EdgeInsets.all(10),
+      decoration: BoxDecoration(
+        color: const Color(0xFFFFFFFF).withValues(alpha: 0.1),
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(
+          color: const Color(0xFFFFFFFF).withValues(alpha: 0.2),
+        ),
+      ),
+      child: Row(
+        spacing: 8,
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Icon(
+            Icons.search,
+            size: 12,
+            color: const Color(0xFFFFFFFF).withValues(alpha: 0.1),
+          ),
+          Text('Search', style: TextStyle(color: Colors.white70, fontSize: 12)),
+        ],
+      ),
+    );
+  }
+}
+
 class ShowStatus extends StatelessWidget {
   const ShowStatus({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Row(
+      spacing: 6.0,
       mainAxisSize: MainAxisSize.min,
       children: [
         Icon(Icons.circle, size: 8, color: Color(0xFF4CAF50)),
-        const SizedBox(width: 6),
         Text(
           'LIVE',
           style: TextStyle(color: const Color(0xFF4CAF50), fontSize: 12),
@@ -88,9 +96,9 @@ class Logo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      spacing: 8.0,
       children: [
         Icon(Icons.dashboard_customize_rounded, size: 34, color: Colors.white),
-        const SizedBox(width: 8),
         Text('iSense', style: TextStyle(color: Colors.white70, fontSize: 20)),
       ],
     );
