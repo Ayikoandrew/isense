@@ -1,3 +1,4 @@
+import 'package:dashboad/pages/build_nav_bar.dart';
 import 'package:dashboad/pages/text_info.dart';
 import 'package:flutter/material.dart';
 
@@ -14,6 +15,7 @@ class BuildHeader extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Row(
+                spacing: 8,
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Icon(
@@ -21,7 +23,6 @@ class BuildHeader extends StatelessWidget {
                     size: 34,
                     color: Colors.white,
                   ),
-                  const SizedBox(width: 8),
                   Text(
                     'iSense',
                     style: TextStyle(color: Colors.white70, fontSize: 20),
@@ -33,10 +34,10 @@ class BuildHeader extends StatelessWidget {
                   alignment: WrapAlignment.end,
                   crossAxisAlignment: WrapCrossAlignment.center,
                   children: [
-                    GestureDetector(child: _buildNavBar("Home")),
-                    GestureDetector(child: _buildNavBar("Feature")),
-                    GestureDetector(child: _buildNavBar("Pricing")),
-                    GestureDetector(child: _buildNavBar("About")),
+                    GestureDetector(child: BuildNavBar(text: "Home")),
+                    GestureDetector(child: BuildNavBar(text: "Feature")),
+                    GestureDetector(child: BuildNavBar(text: "Pricing")),
+                    GestureDetector(child: BuildNavBar(text: "About")),
 
                     const SizedBox(width: 20),
                     ElevatedButton(
@@ -77,7 +78,11 @@ class BuildHeader extends StatelessWidget {
             child: Row(
               mainAxisSize: MainAxisSize.min,
               children: [
-                Icon(Icons.hotel_class_sharp, size: 16, color: Colors.white70),
+                Icon(
+                  Icons.hotel_class_sharp,
+                  size: 16,
+                  color: const Color(0xFFFA8E01),
+                ),
                 const SizedBox(width: 8),
                 Text(
                   '2000+ businesses trust our platform',
@@ -149,21 +154,6 @@ class BuildHeader extends StatelessWidget {
             ],
           ),
         ],
-      ),
-    );
-  }
-
-  Widget _buildNavBar(String text) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-      child: Text(
-        text,
-        textAlign: TextAlign.center,
-        style: TextStyle(
-          fontSize: 14,
-          fontWeight: FontWeight.w500,
-          color: Colors.white,
-        ),
       ),
     );
   }
