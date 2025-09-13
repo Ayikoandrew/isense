@@ -1,4 +1,4 @@
-import 'package:dashboad/pages/home_page.dart';
+import 'package:dashboad/widgets/responsive_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const HomePage(),
+      home: const ResponsivePage(),
     );
   }
 }
