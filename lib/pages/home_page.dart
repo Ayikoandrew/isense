@@ -1,6 +1,6 @@
 import 'package:dashboad/pages/build_header.dart';
 import 'package:dashboad/pages/build_main_content.dart';
-import 'package:dashboad/pages/client_company.dart';
+import 'package:dashboad/pages/trusted_content.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -9,7 +9,6 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(),
       body: SingleChildScrollView(
         child: Stack(
           children: [
@@ -34,56 +33,13 @@ class HomePage extends StatelessWidget {
 
                     SizedBox(height: 600, child: BuildMainContent()),
 
-                    _trustedContent(),
+                    TrustedContent(),
                   ],
                 ),
               ),
             ),
           ],
         ),
-      ),
-    );
-  }
-
-  Widget _trustedContent() {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-      child: Column(
-        spacing: 10,
-        children: [
-          Text(
-            'Trusted by 2000+ businesses',
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              fontSize: 12,
-              color: const Color(0xFFFFFFFF),
-              textBaseline: TextBaseline.alphabetic,
-              height: 1.2,
-            ),
-          ),
-          SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                ClientCompany(icon: Icons.abc, name: 'Aburn Inc.'),
-                ClientCompany(icon: Icons.hotel, name: "Grand Vista Hotels"),
-                ClientCompany(
-                  icon: Icons.apartment,
-                  name: "Urban Stay Resorts",
-                ),
-                ClientCompany(
-                  icon: Icons.location_city,
-                  name: "Lakeside Lodges",
-                ),
-                ClientCompany(
-                  icon: Icons.business,
-                  name: "Metropolitan Suites",
-                ),
-              ],
-            ),
-          ),
-        ],
       ),
     );
   }
