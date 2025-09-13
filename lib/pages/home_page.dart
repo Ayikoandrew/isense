@@ -28,16 +28,14 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               child: SafeArea(
-                child: SingleChildScrollView(
-                  child: Column(
-                    children: [
-                      BuildHeader(),
+                child: Column(
+                  children: [
+                    BuildHeader(),
 
-                      SizedBox(height: 600, child: BuildMainContent()),
+                    SizedBox(height: 600, child: BuildMainContent()),
 
-                      _trustedContent(),
-                    ],
-                  ),
+                    _trustedContent(),
+                  ],
                 ),
               ),
             ),
@@ -51,6 +49,7 @@ class HomePage extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
       child: Column(
+        spacing: 10,
         children: [
           Text(
             'Trusted by 2000+ businesses',
@@ -62,7 +61,6 @@ class HomePage extends StatelessWidget {
               height: 1.2,
             ),
           ),
-          const SizedBox(height: 10),
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Row(
